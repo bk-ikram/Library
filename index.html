@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercise.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <dialog>
+        
+        <form method="dialog">
+            <h1>Enter the following details for the book you wish to add</h1>
+            <p>
+                <label for="title">Title</label>
+                <input id="title" name="title" type="text">
+            </p>
+            <p>
+                <label for="author">Author</label>
+                <input id="author" name="author" type="text">
+            </p>
+            <p>
+                <label for="pages">Number of Pages</label>
+                <input id="pages" name="pages" type="tel">
+            </p>
+
+            <fieldset>
+                <legend>Have you read this book yet?</legend>
+                <div>
+                    <input id="read" name="status" type="radio" value="read">
+                    <label for="read">Read</label>
+                </div>
+                <div>
+                    <input id="unread" name="status" type="radio" value="unread">
+                    <label for="unread">Not Yet</label>
+                </div>
+            </fieldset>
+            <div class="buttons">
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="default">Add</button>
+            </div>
+        </form>
+        
+    </dialog>
+    <div class="shelf">
+        <div class="book unread">
+            <svg class="book-img" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewBox="0 0 512 512"
+                xml:space="preserve">
+                <g>
+                    <path class="st0" d="M415.594,93.344l-18.906-62.563c4.625-2.969,7.75-8.156,7.75-14.078C404.438,7.469,396.969,0,387.719,0
+		H129.891C112.5,0,96.609,7.094,85.25,18.5c-11.406,11.359-18.516,27.25-18.5,44.625V470.75C66.75,493.531,85.219,512,108,512h302.5
+		c19.188,0,34.75-15.547,34.75-34.734V127.578C445.25,110.125,432.344,95.844,415.594,93.344z M129.891,92.844
+		c-8.266,0-15.594-3.313-21.016-8.703c-5.406-5.453-8.719-12.766-8.719-21.016s3.313-15.578,8.719-21.016
+		c5.422-5.391,12.75-8.703,21.016-8.703h241.984l17.969,59.438H129.891z" />
+                </g>
+            </svg>
+            <div class="read-status">
+                <span></span>
+            </div>
+            <h2 class="book-title">This is my book title</h2>
+            <h2 class="book-author">This is the name of the author</h2>
+            <svg class="trash-icon" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+    </div>
+    <button class="add-book">
+        <h1>Add a new book<span>
+                <svg class="add-book-icon" width="800px" height="800px" viewBox="-0.5 0 16 16" id="add-book-16px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="Subtração_6" data-name="Subtração 6"
+                        d="M7,16H1.5a.5.5,0,0,1-.5-.5V15H.5a.5.5,0,1,1,0-1H1V11H.5a.5.5,0,1,1,0-1H1V7H.5a.5.5,0,1,1,0-1H1V3.045H.5a.5.5,0,1,1,0-1H1V.5A.5.5,0,0,1,1.5,0h10A3.5,3.5,0,0,1,15,3.5V8H14V3.5A2.5,2.5,0,0,0,11.5,1H2V2.045h.545a.5.5,0,0,1,0,1H2V6h.5a.5.5,0,0,1,0,1H2v3h.5a.5.5,0,0,1,0,1H2v3h.5a.5.5,0,0,1,0,1H7v1Z" />
+                    <path id="Caminho_266" data-name="Caminho 266" d="M976.148,357.487h0"
+                        transform="translate(-961.648 -349.487)" fill="none" stroke="#000000" stroke-linecap="round"
+                        stroke-width="1" />
+                    <path id="Caminho_267" data-name="Caminho 267" d="M976.148,357.487h0"
+                        transform="translate(-969.148 -341.987)" fill="none" stroke="#000000" stroke-linecap="round"
+                        stroke-width="1" />
+                    <path id="Caminho_179" data-name="Caminho 179"
+                        d="M38,12.5a.5.5,0,0,1-.5.5H35v2.5a.5.5,0,0,1-1,0V13H31.5a.5.5,0,0,1,0-1H34V9.5a.5.5,0,0,1,1,0V12h2.5A.5.5,0,0,1,38,12.5Z"
+                        transform="translate(-23)" />
+                </svg>
+            </span></h1>
+    </button>
+</body>
+
+</html>

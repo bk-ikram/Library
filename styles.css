@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "NothingYouCouldDo";
+    src: url(Assets/Fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Quintessential";
+    src: url(Assets/Fonts/Quintessential/Quintessential-Regular.ttf);
+}
+
+/* html{
+    height: 100vh;
+    width: 100vw;
+} */
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(Assets/Images/Library.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 80px;
+}
+
+.shelf{
+    background-image: url(Assets/Images/Empty\ bookshelf.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    padding: 130px 50px 30px 50px;
+
+}
+
+
+.book-img{
+
+    fill: #1D4162;
+}
+ .book{
+    height: 300px;
+    width: 200px;
+    flex: 1 1 auto;
+    position: relative;
+} 
+
+.book h2{
+    font-size: 13px;
+    background: rgb(0,0,0,0.3);
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    font-family: Quintessential;
+    top: -150px;
+    left: 40px;
+    max-width: 120px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 5px;
+}
+.trash-icon{
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    fill: gray;
+    background-color: rgb(255,255,255,0.2);
+    border-radius: 3px;
+}
+/* .unread::after{ */
+.unread span{
+    content: '';
+    background-image: url(Assets/Images/read-unread-svgrepo-com.svg);
+    background-size: contain;
+    background-color: rgb(255,255,255,0.2);
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -40px;
+    left: 30px;
+}
+
+/* .read::after{ */
+.read span{
+    content: '';
+    background-image: url(Assets/Images/read-svgrepo-com.svg);
+    background-size: contain;
+    background-color: rgb(255,255,255,0.2);
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -40px;
+    left: 30px;
+}
+
+.add-book{
+    margin: auto; 
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    position: relative; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 15px;
+    border-radius: 15px;
+    background: #71797E;
+    color: #363737;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.add-book-icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    fill: #363737;
+}
+
+dialog{
+    background-image: url(Assets/Images/parchment2.png);
+    margin: auto;
+    background-color: rgb(0,0,0,0);
+    border: none;
+    height: 850px;
+    width: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 200px 60px;
+    position: relative;
+}
+
+form{
+    position: absolute;
+     width: 70%;
+     height: 60%;
+    /*top: 200px;
+    left: 50px; */
+}
+form h1{
+    font-family: Quintessential;
+    font-size: 25px;
+    font-weight: bolder;
+    margin:auto;
+    margin-bottom: 40px;
+    
+}
+
+p label,legend,div label{
+    width: 200px;
+    display: inline-block;
+    font-family: Quintessential;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p input{
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: black solid 2px;
+    font-family: NothingYouCouldDo;
+    padding: 3px 3px;
+    border-radius: 5px;
+}
+
+p input:focus{
+    outline: none;
+    background-color: rgb(0,0,0,0.05);
+}
+
+fieldset{
+    border: None;
+}
+div input{
+    margin-left: 200px;
+    margin-right: 5px;
+}
+div.buttons{
+    margin:50px auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button{
+    /* font-size: 20px;
+    padding: 10px 5px;
+    font-family: Quintessential;
+    width: 100px;
+    border-radius: 5px; */
+    border-top-left-radius: 4.63px 17.5px;
+    border-top-right-radius: 2.9px 16.3px;
+    border-bottom-left-radius: 13.8px 2.4px;
+    border-bottom-right-radius: 15px 3px;
+    border: none;
+    /* border: solid 3px #6e422b; */
+    padding: 10px 5px;
+    max-width: 150px;
+    width: 70%;
+    font-size: 20px;
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    background-color: #bc8b56;
+    color: #6e422b;
+
+    
+}
