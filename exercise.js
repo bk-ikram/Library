@@ -65,7 +65,6 @@ body.addEventListener("click",(e)=>{
     };
     //To delete the book if its trash icon is pressed.
     if(e.target.closest(".trash-icon")){
-        console.log("detected delete");
         bookIdToDelete = e.target.parentElement.parentElement.getAttribute("UUID");
         myLibrary = myLibrary.filter(ele => ele.id != bookIdToDelete);
         bookToDelete = shelf.querySelector(`[UUID = "${bookIdToDelete}"]`);
