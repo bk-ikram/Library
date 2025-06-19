@@ -36,18 +36,23 @@ body{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
+    row-gap: 95px;
     padding: 130px 50px 30px 50px;
+    overflow: hidden;
+    justify-content: start;
 
 }
 
+.hide{
+    display: none;
+}
 
 .book-img{
 
     fill: #1D4162;
 }
  .book{
-    height: 300px;
+    height: 200px;
     width: 200px;
     flex: 1 1 auto;
     position: relative;
@@ -63,7 +68,7 @@ body{
     top: -150px;
     left: 40px;
     max-width: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     padding: 5px;
 }

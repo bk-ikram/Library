@@ -1,7 +1,7 @@
 Items remaining:
 DONE - Format the dialog form (look into making input look handwritten, use paper forms as inspiration)
 DONE - Add functionality to the toggle read/not read button
+create the book object, code to create multiple instances
 Add functionality to the delete button
 Add handling of using form input data
-create the book object, code to create multiple instances
 test and perfect the way the books take up space in the shelf flex div.
