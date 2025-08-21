@@ -15,21 +15,22 @@ const pagesInput = document.querySelector("input[name='pages'");
 let myLibrary = [];
 displayBooks();
 
-function Book(title,author,pages,isRead){
-    if(!new.target){
-        throw Error("You must use the 'new' operator to call the constructor");
+class Book{
+    constructor(title,author,pages,isRead){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+        this.id = crypto.randomUUID();
     }
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead;
-    this.isReadText = isRead === 'read' ? ", already read" : ", not read yet";
-    this.id = crypto.randomUUID();
-    this.info = function(){
+    get isReadText(){
+        return isRead === 'read' ? ", already read" : ", not read yet";
+    }
+    info(){
         //return (this.title + " by " & this.author & ", " & this.pages & " pages" & this.isReadText);
         return this.title.concat(" by ",this.author,", ",this.pages," pages",this.isReadText);
     };
-};
+}
 
 function addBookToLibrary(entry) {
     // take params, create a book then store it in the array
@@ -78,7 +79,7 @@ function displayBooks(){
         shelf.removeChild(shelf.lastChild);
     }
     for(let i = 0; i < myLibrary.length; i++){
-        entry = myLibrary[i];
+        const entry = myLibrary[i];
         bookToDisplay = bookTemplate.cloneNode(true);
         bookToDisplay.querySelector(".book-title").textContent = entry.title;
         bookToDisplay.querySelector(".book-author").textContent = entry.author;
