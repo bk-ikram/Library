@@ -7,9 +7,9 @@ const bookTemplate = document.querySelector(".book.hide");
 const body = document.querySelector("body");
 
 //Form elements
-const titleInput = document.querySelector("input[name='title'");
-const authorInput = document.querySelector("input[name='author'");
-const pagesInput = document.querySelector("input[name='pages'");
+const titleInput = document.querySelector("input[name='title']");
+const authorInput = document.querySelector("input[name='author']");
+const pagesInput = document.querySelector("input[name='pages']");
 
 
 let myLibrary = [];
@@ -52,6 +52,14 @@ confirmButton.addEventListener("click",(e) =>{
     let author = formData.get("author");
     let pages = formData.get("pages");
     let status = formData.get("status");
+    //check if title or author is empty
+    const errorMessageTitle = "Please enter a value for the title.";
+    const errorMessageAuthor = "Please enter a value for the author.";
+    titleInput.setCustomValidity(title ? "" : errorMessageTitle);
+    authorInput.setCustomValidity(author ? "" : errorMessageAuthor);
+    if(!form.reportValidity()){
+        return;
+    }
     let book = new Book(title,author,pages,status);
     addBookToLibrary(book);
     dialog.close();
